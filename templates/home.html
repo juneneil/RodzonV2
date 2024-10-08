@@ -1,0 +1,490 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--All Product / Landing page image-->
+<!-- <section id="home-section" class="hero">
+  <div class="home-slider owl-carousel">
+    <div class="slider-item" style="background-image: url({% static 'images/bg_1.jpg' %});">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+          <div class="col-md-12 ftco-animate text-center">
+            <h1 class="mb-2">WE ARE YOUR BUSINESS&amp; PIPELINE</h1>
+            <h2 class="subheading mb-4">We deliver best &amp; products</h2>
+            <p><a href="#" class="btn btn-primary">View Details</a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-item" style="background-image: url({% static 'images/bg_2.jpg' %});">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+          <div class="col-sm-12 ftco-animate text-center">
+            <h1 class="mb-2">WE SPECIALIZED IN SALES AND DISTRIBUTION OF VARIOUS&amp; PRODUCTS</h1>
+            <h2 class="subheading mb-4">We deliver best &amp; producs</h2>
+            <p><a href="#" class="btn btn-primary">View Details</a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!--All Product / Landing page image-->
+<style>
+  #slideshow {
+      overflow: hidden;
+      height: 550px;
+      width: 1200px;
+      margin: 0 auto;
+  }
+  .slide {
+      float: left;
+      height: 550px;
+      width: 1200px;
+      background-size: cover;
+      background-position: center;
+  }
+  .slide-wrapper {
+      width: calc(1200px * 4);
+      animation: slide 20s ease infinite;
+  }
+  @keyframes slide {
+      0% {
+          margin-left: 0px;
+      }
+      25% {
+          margin-left: calc(-1200px * 1);
+      }
+      50% {
+          margin-left: calc(-1200px * 2);
+      }
+      
+      
+  }
+</style>
+<div id="slideshow">
+    <div class="slide-wrapper">
+        <div class="slide" style="background-image: url({% static 'images/wins1.png' %});"></div>
+        <div class="slide" style="background-image: url({% static 'images/wins2.png' %});"></div>
+        <div class="slide" style="background-image: url({% static 'images/wins3.png' %});"></div>
+    </div>
+</div>
+
+
+
+
+<!--Introduction-->
+<section class="ftco-section img"  id="secs1" style="background-image: url({% static 'images/wins4.png' %});">
+  <div class="container">
+    <div class="row justify-content-end">
+      <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
+        <h3><a href="#">Introduction</a></h3>
+        <p>Rodzon Marketing Corporation (RMC) stands as a premier leader in the sales and distribution of 
+          an extensive range of products from both local and international manufacturers. As a proudly 100%
+          Filipino-owned enterprise, RMC is manage by a family with a deep-rooted legacy of business success
+          and excellence.</p>
+          <br>
+        <p>Our commitment to quality and customer satisfaction has established us as a trusted partner in the 
+          industry, continually striving to deliver outstanding service and innovative solutions. With a dedicated 
+          team and passion for excellence, RMC continues to set the standard in the market, ensuring the highest level 
+          of reliability and professionalism.</p>
+          <br>
+        <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Business to Consumer-->
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate" style="text-align: center;">
+        <h3><a href="#">Business to Consumer</a></h3>
+        <p>Bringing your products to supermarket shelves </p>
+          <br>
+        <p><a href="#" class="btn btn-primary">Get started</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--About-->
+<section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/about.jpg' %});">
+        <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+          <span class="icon-play"></span>
+        </a>
+      </div>
+      <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
+        <div class="heading-section-bold mb-4 mt-md-5">
+          <div class="ml-md-0">
+            <h2 class="mb-4">About Rodzon Marketing Corporation</h2>
+          </div>
+        </div>
+        <div class="pb-md-5">
+          <p>With its humble beginnings in 1977, Rodzon Marketing Corporation (RMC), became one of the leading companies
+            in the sales and distribution of a wide range of products of both local and foreign manufacturers.</p>
+          <br>
+          <p>RMC is a 100% Filipino-owned enterprise, managed by a family which carries the legacy of success and excellence
+            in business.</p>
+          <br>
+          <p>In more than three decades in the business, RMC has superb customer base and support, proven sales management techniques
+            and warehousing system that's definitely world-class and globally-competitive.</p>
+          <br>
+          <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Actual Data-->
+<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/wins5.png' %});">
+  <div class="container">
+    <div class="row justify-content-center py-5">
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+                <strong class="number" data-number="40" style="font-weight: 700; font-size: 50px; color: #000000;">0</strong><strong style="font-weight: 700; font-size: 50px; color: #000000;">+</strong>
+                <span style="font-weight: 400; font-size: 15px; color: #000000;">Years of Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+                <strong class="number" data-number="100" style="font-weight: 700; font-size: 50px; color: #000000;">0</strong><strong style="font-weight: 700; font-size: 50px; color: #000000;">+</strong>
+                <span style="font-weight: 400; font-size: 15px; color: #000000;">Product Lines</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+                <strong class="number" data-number="8" style="font-weight: 700; font-size: 50px; color: #000000;">0</strong>
+                <span style="font-weight: 400; font-size: 15px; color: #000000;">Partners</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+                <strong class="number" data-number="10000" style="font-weight: 700; font-size: 50px; color: #000000;">0</strong><strong style="font-weight: 700; font-size: 50px; color: #000000;">+</strong>
+                <span style="font-weight: 400; font-size: 15px; color: #000000;">Stores Nationwide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Key Accounts/Partners-->
+<section class="ftco-section ftco-partner" id="secs2">
+  <div class="row justify-content-center mb-5 pb-3">
+    <div class="col-md-7 heading-section ftco-animate text-center">
+      <span class="subheading" style="font-size: 30px; font-weight: bold;">Partners</span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="{% static 'images/pic3.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="{% static 'images/pic4.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="{% static 'images/pic5.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="{% static 'images/pic6.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="{% static 'images/pic7.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="{% static 'images/pic8.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="{% static 'images/pic9.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Our Services-->
+<style>
+  .testimony-wrap .user-img{
+    width: 280px;
+    height: 285px;
+    border-radius: 5%;
+  }
+</style>
+<section class="ftco-section testimony-section" id="secs5">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section ftco-animate text-center">
+        <span class="subheading" style="font-size: 30px; font-weight: bold;">Our Services</span>
+      </div>
+    </div>
+    <div class="row ftco-animate">
+      <div class="col-md-12">
+        <div class="carousel-testimony owl-carousel">
+          <div class="item">
+            <div class="testimony-wrap p-4 pb-5">
+              <div class="user-img mb-5" style="background-image: url({% static 'images/pic10.jpg' %})">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text text-center">
+                <p class="mb-5 pl-4 line">Simplifying supply chains with seamless logistics solutions that keep your business moving forward.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="testimony-wrap p-4 pb-5">
+              <div class="user-img mb-5" style="background-image: url({% static 'images/pic11.jpg' %})">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text text-center">
+                <p class="mb-5 pl-4 line">Empowering your brand with innovative marketing strategies that drive growth and engagement.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="testimony-wrap p-4 pb-5">
+              <div class="user-img mb-5" style="background-image: url({% static 'images/pic12.jpg' %})">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text text-center">
+                <p class="mb-5 pl-4 line">Maximize your revenue with our expert sales techniques and personalized customer experiences.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Our Clients-->
+<section class="ftco-section" id="secs4">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section ftco-animate text-center">
+        <span class="subheading" style="font-size: 30px; font-weight: bold;">Our Clients</span>
+      </div>
+    </div>
+    <div class="row no-gutters ftco-services">
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+            <span class="flaticon-shipped"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
+            <span class="flaticon-diet"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
+            <span class="flaticon-award"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
+            <span class="flaticon-customer-service"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row no-gutters ftco-services mt-3">
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+            <span class="flaticon-shipped"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
+            <span class="flaticon-diet"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
+            <span class="flaticon-award"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
+            <span class="flaticon-customer-service"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--3 Flagships-->
+<section class="ftco-section ftco-category ftco-no-pt" id="secs3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6 order-md-last align-items-stretch d-flex">
+            <div class="category-wrap-2 ftco-animate img align-self-stretch d-flex" style="background-image: url({% static 'images/category.jpg' %});">
+              <div class="text text-center">
+                <h2>Flag Ships</h2>
+                <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({% static 'images/category-1.jpg' %});">
+              <div class="text px-3 py-1">
+                <h2 class="mb-0"><a href="#">Fruits</a></h2>
+              </div>
+            </div>
+            <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url({% static 'images/category-2.jpg' %});">
+              <div class="text px-3 py-1">
+                <h2 class="mb-0"><a href="#">Vegetables</a></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({% static 'images/category-3.jpg' %});">
+          <div class="text px-3 py-1">
+            <h2 class="mb-0"><a href="#">Juices</a></h2>
+          </div>
+        </div>
+        <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url({% static 'images/category-4.jpg' %});">
+          <div class="text px-3 py-1">
+            <h2 class="mb-0"><a href="#">Dried</a></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Contact us-->
+
+
+<!--Products-->
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center mb-3 pb-3">
+      <div class="col-md-12 heading-section text-center ftco-animate">
+        <span class="subheading">Featured Products</span>
+        <h2 class="mb-4">Our Products</h2>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      {% if products %}
+      {% for product in products %}
+      <div class="col-md-6 col-lg-3 ftco-animate">
+        <div class="product">
+          <a href="{% url 'product-details' product.id %}" class="img-prod"><img class="img-fluid" src="{{ product.photo.url }}" alt="Colorlib Template">
+            <div class="overlay"></div>
+          </a>
+          <div class="text py-3 pb-4 px-3 text-center">
+            <h3><a href="{% url 'product-details' product.id %}">{{ product.name }}</a></h3>
+            <div class="d-flex">
+              <div class="pricing">
+                <p class="price"><span class="price-sale">${{ product.price }}</span></p>
+              </div>
+            </div>
+            <div class="bottom-area d-flex px-3">
+              <div class="m-auto d-flex">
+                <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                  <span><i class="ion-ios-menu"></i></span>
+                </a>
+                <a href="{% url 'cart' %}" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                  <span><i class="ion-ios-cart"></i></span>
+                </a>
+                <a href="#" class="heart d-flex justify-content-center align-items-center ">
+                  <span><i class="ion-ios-heart"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      {% else %}
+      <h2 style="margin: auto">Sorry! There is no Products Available!</h2>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+
+
+<!--Footer-->
+
+<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
+  <div class="container py-4">
+    <div class="row d-flex justify-content-center py-5">
+      <div class="col-md-6">
+        <h2 style="font-size: 22px;" class="mb-0">Subcribe to our Newsletter</h2>
+        <span>Get e-mail updates about our latest Products and special offers</span>
+      </div>
+      <div class="col-md-6 d-flex align-items-center">
+        <form class="subscribe-form" method=POST>
+          <div class="form-group d-flex">
+            {% csrf_token %}
+            {{ forms.email }}
+            <input type="submit" value="Subscribe" class="submit px-3">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/wins9.png' %});">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home</a></span> <span>Contact us</span></p>
+            <h1 class="mb-0 bread">Contact us</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section contact-section bg-light" id="secs6">
+      <div class="container">
+      	<div class="row d-flex mb-5 contact-info">
+          <!-- <div class="w-100"></div>
+          <div class="col-md-3 d-flex">
+          	<div class="info bg-white p-4">
+	            <p><span>Address:</span> 138 Hidalgo Street Doña Adela Hidalgo Village, Pasay City Philippines 1300</p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex">
+          	<div class="info bg-white p-4">
+	            <p><span>Phone:</span> <a href="tel://01925288772">+632 8818 5954</a></p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex">
+          	<div class="info bg-white p-4">
+	            <p><span>Email:</span> <a href="mailto:sales@rodzon.com.ph">sales@rodzon.com.ph</a></p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex">
+          	<div class="info bg-white p-4">
+	            <p><span>Website</span> <a href="#" target="_blank">test.com</a></p>
+	          </div>
+          </div>
+        </div> -->
+        <div class="row block-9">
+          <div class="col-md-6 order-md-last d-flex">
+            <form class="bg-white p-5 contact-form" method="post">
+              {% csrf_token %}
+              <div class="form-group">
+                {% if messages %}
+                  {% for message in messages %}
+                  <span{% if message.tags %} class="{{ message.tags }}"{% endif %} style="color: green">{{ message }}</span>
+                  {% endfor %}
+                {% endif %}
+              </div>
+              <div class="form-group">
+                {{ form.name }}
+              </div>
+              <div class="form-group">
+                {{ form.email }}
+              </div>
+              <div class="form-group">
+                {{ form.subject }}
+              </div>
+              <div class="form-group">
+                {{ form.message }}
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 d-flex">
+          	<!-- <div id="map" class="bg-white"></div> -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.425804517117!2d121.001194!3d14.5506214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9cae6fb4593%3A0xef7c570a9e201d06!2sAdella%20Hidalgo%20Village%2C%20Pasay%20City!5e0!3m2!1sen!2sph!4v1692376392765!5m2!1sen!2sph" 
+                width="600" 
+                height="650" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
