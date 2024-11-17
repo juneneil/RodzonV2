@@ -43,18 +43,20 @@
   #slideshow {
       overflow: hidden;
       height: 550px;
-      width: 1200px;
+      /* width: 1200px; */
+      width: 80%;
       margin: 0 auto;
   }
   .slide {
       float: left;
       height: 550px;
       width: 1200px;
+      /* width: 90%; */
       background-size: cover;
       background-position: center;
   }
   .slide-wrapper {
-      width: calc(1200px * 4);
+      width: calc(1200px * 3);
       animation: slide 20s ease infinite;
   }
   @keyframes slide {
@@ -73,9 +75,9 @@
 </style>
 <div id="slideshow">
     <div class="slide-wrapper">
-        <div class="slide" style="background-image: url({% static 'images/wins1.png' %});"></div>
-        <div class="slide" style="background-image: url({% static 'images/wins2.png' %});"></div>
-        <div class="slide" style="background-image: url({% static 'images/wins3.png' %});"></div>
+        <div class="slide" style="background-image: url({% static 'images/new/new1.jpg' %});"></div>
+        <div class="slide" style="background-image: url({% static 'images/new/new2.jpg' %});"></div>
+        <div class="slide" style="background-image: url({% static 'images/new/new3.jpg' %});"></div>
     </div>
 </div>
 
@@ -83,62 +85,96 @@
 
 
 <!--Introduction-->
-<section class="ftco-section img"  id="secs1" style="background-image: url({% static 'images/wins4.png' %});">
-  <div class="container">
-    <div class="row justify-content-end">
-      <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
-        <h3><a href="#">Introduction</a></h3>
-        <p>Rodzon Marketing Corporation (RMC) stands as a premier leader in the sales and distribution of 
-          an extensive range of products from both local and international manufacturers. As a proudly 100%
-          Filipino-owned enterprise, RMC is manage by a family with a deep-rooted legacy of business success
-          and excellence.</p>
-          <br>
-        <p>Our commitment to quality and customer satisfaction has established us as a trusted partner in the 
-          industry, continually striving to deliver outstanding service and innovative solutions. With a dedicated 
-          team and passion for excellence, RMC continues to set the standard in the market, ensuring the highest level 
-          of reliability and professionalism.</p>
-          <br>
-        <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
+
+<!--Eto yung dating Introduction-->
+
+<!-- <style>
+  .rodflex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  text-align: center;
+}
+
+.rodflex-item-left {
+  /* background-color: #f1f1f1; */
+  padding: 5px;
+  flex: 50%;
+}
+
+.rodflex-item-right {
+  /* background-color: dodgerblue; */
+  padding: 5px;
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .rodflex-container {
+    flex-direction: column;
+  }
+}
+</style>
+
+
+
+<section >
+  <div class="rodflex-container">
+    <div class="rodflex-item-left">
+      <div>
+        <div class="ftco-section img"  id="secs1" style="background-image: url({% static 'images/new/new4.jpg' %});"></div>
+      </div>
+    </div>
+    <div class="rodflex-item-right">
+      <div class="">
+        <div class="row justify-content-center pt-5 pb-4">
+          <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
+            <h3><a href="#">Who we are</a></h3>
+            <p>Rodzon Marketing Corporation (RMC) stands as a premier leader in the sales and distribution of 
+              an extensive range of products from both local and international manufacturers. As a proudly 100%
+              Filipino-owned enterprise, RMC is manage by a family with a deep-rooted legacy of business success
+              and excellence.</p>
+              <br>
+            <p>Our commitment to quality and customer satisfaction has established us as a trusted partner in the 
+              industry, continually striving to deliver outstanding service and innovative solutions. With a dedicated 
+              team and passion for excellence, RMC continues to set the standard in the market, ensuring the highest level 
+              of reliability and professionalism.</p>
+              <br>
+            <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-<!--Business to Consumer-->
-<section class="ftco-section">
+<section class="ftco-section ftco-no-pb ftco-no-pt bg-white">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate" style="text-align: center;">
-        <h3><a href="#">Business to Consumer</a></h3>
-        <p>Bringing your products to supermarket shelves </p>
-          <br>
-        <p><a href="#" class="btn btn-primary">Get started</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--About-->
-<section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/about.jpg' %});">
-        <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+    <div class="row pt-5 pb-5">
+      <div class="col-md-5 p-md-5 img img-5 d-flex justify-content-center align-items-center pt-4" style="background-image: url({% static 'images/new/new4.jpg' %});">
+        <!-- <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
           <span class="icon-play"></span>
-        </a>
+        </a> -->
+        <!-- <a href="{% static 'images/new/video.MP4' %}" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+          <span class="icon-play"></span>
+        </a> -->
       </div>
       <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
         <div class="heading-section-bold mb-4 mt-md-5">
           <div class="ml-md-0">
-            <h2 class="mb-4">About Rodzon Marketing Corporation</h2>
+            <h2 class="mb-4">Who we are</h2>
           </div>
         </div>
         <div class="pb-md-5">
-          <p>With its humble beginnings in 1977, Rodzon Marketing Corporation (RMC), became one of the leading companies
-            in the sales and distribution of a wide range of products of both local and foreign manufacturers.</p>
+          <p>Rodzon Marketing Corporation (RMC) stands as a premier leader in the sales and distribution of 
+            an extensive range of products from both local and international manufacturers. As a proudly 100%
+            Filipino-owned enterprise, RMC is manage by a family with a deep-rooted legacy of business success
+            and excellence.</p>
           <br>
-          <p>RMC is a 100% Filipino-owned enterprise, managed by a family which carries the legacy of success and excellence
-            in business.</p>
+          <p>Our commitment to quality and customer satisfaction has established us as a trusted partner in the 
+            industry, continually striving to deliver outstanding service and innovative solutions. With a dedicated 
+            team and passion for excellence, RMC continues to set the standard in the market, ensuring the highest level 
+            of reliability and professionalism.</p>
           <br>
           <p>In more than three decades in the business, RMC has superb customer base and support, proven sales management techniques
             and warehousing system that's definitely world-class and globally-competitive.</p>
@@ -150,8 +186,59 @@
   </div>
 </section>
 
+<!--Business to Consumer-->
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate" style="text-align: center;">
+        <h3><a href="#" style="font-size: 30px; font-weight: bold;">Business to Consumer</a></h3>
+        <p>Bringing your products to supermarket shelves </p>
+          <br>
+        <p><a href="#" class="btn btn-primary">Get started</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--About-->
+<section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+  <div class="container">
+    <div class="column">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-size: cover; background-position: center; background-repeat: no-repeat; width: 60%; height: 550px; background-image: url({% static 'images/LEADERS PORTRAIT.jpg' %});">
+          <!-- <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+            <span class="icon-play"></span>
+          </a> -->
+          <a href="{% static 'images/new/video.MP4' %}" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+            <span class="icon-play"></span>
+          </a>
+        </div>
+      </div>  
+        <div class="col-md-12 py-5 wrap-about pb-md-5 ftco-animate">
+          <div class="heading-section-bold mb-4 mt-md-5">
+            <div class="ml-md-0">
+              <h2 class="mb-4">About Rodzon Marketing Corporation</h2>
+            </div>
+          </div>
+          <div class="pb-md-5">
+            <p>With its humble beginnings in 1977, Rodzon Marketing Corporation (RMC), became one of the leading companies
+              in the sales and distribution of a wide range of products of both local and foreign manufacturers.</p>
+            <br>
+            <p>RMC is a 100% Filipino-owned enterprise, managed by a family which carries the legacy of success and excellence
+              in business.</p>
+            <br>
+            <p>In more than three decades in the business, RMC has superb customer base and support, proven sales management techniques
+              and warehousing system that's definitely world-class and globally-competitive.</p>
+            <br>
+            <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
 <!--Actual Data-->
-<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/wins5.png' %});">
+<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/new/new10.png' %});">
   <div class="container">
     <div class="row justify-content-center py-5">
       <div class="col-md-10">
@@ -215,10 +302,20 @@
       <div class="col-sm ftco-animate">
         <a href="#" class="partner"><img src="{% static 'images/pic6.png' %}" class="img-fluid" alt="Colorlib Template"></a>
       </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="{% static 'images/pic7.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="{% static 'images/pic8.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="{% static 'images/pic9.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+    </div>
     </div>
   </div>
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col-sm ftco-animate">
         <a href="#" class="partner"><img src="{% static 'images/pic7.png' %}" class="img-fluid" alt="Colorlib Template"></a>
@@ -230,7 +327,7 @@
         <a href="#" class="partner"><img src="{% static 'images/pic9.png' %}" class="img-fluid" alt="Colorlib Template"></a>
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
 
 <!--Our Services-->
@@ -253,7 +350,7 @@
         <div class="carousel-testimony owl-carousel">
           <div class="item">
             <div class="testimony-wrap p-4 pb-5">
-              <div class="user-img mb-5" style="background-image: url({% static 'images/pic10.jpg' %})">
+              <div class="user-img mb-5" style="background-image: url({% static 'images/new/new16.jpg' %})">
                 <span class="quote d-flex align-items-center justify-content-center">
                   <i class="icon-quote-left"></i>
                 </span>
@@ -265,7 +362,7 @@
           </div>
           <div class="item">
             <div class="testimony-wrap p-4 pb-5">
-              <div class="user-img mb-5" style="background-image: url({% static 'images/pic11.jpg' %})">
+              <div class="user-img mb-5" style="background-image: url({% static 'images/new/new17.jpg' %})">
                 <span class="quote d-flex align-items-center justify-content-center">
                   <i class="icon-quote-left"></i>
                 </span>
@@ -277,7 +374,7 @@
           </div>
           <div class="item">
             <div class="testimony-wrap p-4 pb-5">
-              <div class="user-img mb-5" style="background-image: url({% static 'images/pic12.jpg' %})">
+              <div class="user-img mb-5" style="background-image: url({% static 'images/new/new15.jpg' %})">
                 <span class="quote d-flex align-items-center justify-content-center">
                   <i class="icon-quote-left"></i>
                 </span>
@@ -305,28 +402,32 @@
       <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
         <div class="media block-6 services mb-md-0 mb-4">
           <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
-            <span class="flaticon-shipped"></span>
+            <!-- <span class="flaticon-shipped"></span> -->
+            <img src="{% static 'images/new/new5.jpg' %}" class="img-fluid">
           </div>
         </div>
       </div>
       <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
         <div class="media block-6 services mb-md-0 mb-4">
           <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
-            <span class="flaticon-diet"></span>
+            <!-- <span class="flaticon-diet"></span> -->
+            <img src="{% static 'images/new/new6.jpg' %}" class="img-fluid">
           </div>
         </div>
       </div>
       <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
         <div class="media block-6 services mb-md-0 mb-4">
-          <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
-            <span class="flaticon-award"></span>
+          <div class="icon d-flex justify-content-center align-items-center mb-2">
+            <!-- <span class="flaticon-award"></span> -->
+            <img src="{% static 'images/new/new7.jpg' %}" class="img-fluid">
           </div>
         </div>
       </div>
       <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
         <div class="media block-6 services mb-md-0 mb-4">
           <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
-            <span class="flaticon-customer-service"></span>
+            <!-- <span class="flaticon-customer-service"></span> -->
+            <img src="{% static 'images/new/new8.png' %}" class="img-fluid">
           </div>
         </div>
       </div>
@@ -335,29 +436,30 @@
     <div class="row no-gutters ftco-services mt-3">
       <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
         <div class="media block-6 services mb-md-0 mb-4">
-          <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
-            <span class="flaticon-shipped"></span>
+          <div class="icon active d-flex justify-content-center align-items-center mb-2">
+            <!-- <span class="flaticon-shipped"></span> -->
+            <img src="{% static 'images/new/new9.png' %}" class="img-fluid">
           </div>
         </div>
       </div>
       <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
         <div class="media block-6 services mb-md-0 mb-4">
-          <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
-            <span class="flaticon-diet"></span>
+          <div class="icon d-flex justify-content-center align-items-center mb-2">
+            <img src="{% static 'images/new/new12.png' %}" class="img-fluid">
           </div>
         </div>
       </div>
       <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
         <div class="media block-6 services mb-md-0 mb-4">
-          <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
-            <span class="flaticon-award"></span>
+          <div class="icon d-flex justify-content-center align-items-center mb-2">
+            <img src="{% static 'images/new/new13.png' %}" class="img-fluid">
           </div>
         </div>
       </div>
       <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
         <div class="media block-6 services mb-md-0 mb-4">
-          <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
-            <span class="flaticon-customer-service"></span>
+          <div class="icon d-flex justify-content-center align-items-center mb-2">
+            <img src="{% static 'images/new/new14.jpg' %}" class="img-fluid">
           </div>
         </div>
       </div>
@@ -372,7 +474,7 @@
       <div class="col-md-8">
         <div class="row">
           <div class="col-md-6 order-md-last align-items-stretch d-flex">
-            <div class="category-wrap-2 ftco-animate img align-self-stretch d-flex" style="background-image: url({% static 'images/category.jpg' %});">
+            <div class="category-wrap-2 ftco-animate img align-self-stretch d-flex">
               <div class="text text-center">
                 <h2>Flag Ships</h2>
                 <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
@@ -380,14 +482,14 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({% static 'images/category-1.jpg' %});">
+            <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({% static 'images/06 COCO JAM.jpg' %});">
               <div class="text px-3 py-1">
-                <h2 class="mb-0"><a href="#">Fruits</a></h2>
+                <h2 class="mb-0"><a href="#">CocoJam</a></h2>
               </div>
             </div>
-            <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url({% static 'images/category-2.jpg' %});">
+            <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url({% static 'images/06 PB.jpg' %});">
               <div class="text px-3 py-1">
-                <h2 class="mb-0"><a href="#">Vegetables</a></h2>
+                <h2 class="mb-0"><a href="#">Peanut Butter</a></h2>
               </div>
             </div>
           </div>
@@ -395,14 +497,14 @@
       </div>
 
       <div class="col-md-4">
-        <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({% static 'images/category-3.jpg' %});">
+        <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({% static 'images/06 COCO JAM.jpg' %});">
           <div class="text px-3 py-1">
-            <h2 class="mb-0"><a href="#">Juices</a></h2>
+            <h2 class="mb-0"><a href="#">Coco Jam</a></h2>
           </div>
         </div>
-        <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url({% static 'images/category-4.jpg' %});">
+        <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url({% static 'images/06 SALABAT.jpg' %});">
           <div class="text px-3 py-1">
-            <h2 class="mb-0"><a href="#">Dried</a></h2>
+            <h2 class="mb-0"><a href="#">Salabat</a></h2>
           </div>
         </div>
       </div>
@@ -468,7 +570,8 @@
 
 <!--Footer-->
 
-<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
+<!-- <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light"> -->
+<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/new/new10.png' %});">
   <div class="container py-4">
     <div class="row d-flex justify-content-center py-5">
       <div class="col-md-6">

@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block content %}
-    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/bg_1.jpg' %});">
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/new/new19.jpg' %});">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home</a></span> <span>About us</span></p>
-            <h1 class="mb-0 bread">About us</h1>
+          	<!-- <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home</a></span> <span>About us</span></p>
+            <h1 class="mb-0 bread">About us</h1> -->
           </div>
         </div>
       </div>
@@ -17,8 +17,8 @@
     <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/about.jpg' %});">
-            <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+          <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/LEADERS PORTRAIT.jpg' %});">
+            <a href="{% static 'images/new/video.MP4' %}" class="icon popup-vimeo d-flex justify-content-center align-items-center">
               <span class="icon-play"></span>
             </a>
           </div>
@@ -45,7 +45,8 @@
       </div>
     </section>
 
-		<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
+		<!-- <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light"> -->
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/new/new10.png' %});">
       <div class="container py-4">
         <div class="row d-flex justify-content-center py-5">
           <div class="col-md-6">
@@ -65,7 +66,7 @@
     </section>
 
     <!--Actual Data-->
-		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/bg_3.jpg' %});">
+		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/new/new10.png' %});">
       <div class="container">
         <div class="row justify-content-center py-5">
           <div class="col-md-10">
@@ -119,28 +120,32 @@
           <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services mb-md-0 mb-4">
               <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
-                <span class="flaticon-shipped"></span>
+                <!-- <span class="flaticon-shipped"></span> -->
+                <img src="{% static 'images/new/new5.jpg' %}" class="img-fluid">
               </div>
             </div>
           </div>
           <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services mb-md-0 mb-4">
               <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
-                <span class="flaticon-diet"></span>
+                <!-- <span class="flaticon-diet"></span> -->
+                <img src="{% static 'images/new/new6.jpg' %}" class="img-fluid">
               </div>
             </div>
           </div>
           <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
-                <span class="flaticon-award"></span>
+              <div class="icon d-flex justify-content-center align-items-center mb-2">
+                <!-- <span class="flaticon-award"></span> -->
+                <img src="{% static 'images/new/new7.jpg' %}" class="img-fluid">
               </div>
             </div>
           </div>
           <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services mb-md-0 mb-4">
               <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
-                <span class="flaticon-customer-service"></span>
+                <!-- <span class="flaticon-customer-service"></span> -->
+                <img src="{% static 'images/new/new8.png' %}" class="img-fluid">
               </div>
             </div>
           </div>
@@ -149,29 +154,33 @@
         <div class="row no-gutters ftco-services mt-3">
           <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
-                <span class="flaticon-shipped"></span>
+              <div class="icon active d-flex justify-content-center align-items-center mb-2">
+                <!-- <span class="flaticon-shipped"></span> -->
+                <img src="{% static 'images/new/new9.png' %}" class="img-fluid">
               </div>
             </div>
           </div>
           <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
-                <span class="flaticon-diet"></span>
+              <div class="icon d-flex justify-content-center align-items-center mb-2">
+                <!-- <span class="flaticon-diet"></span> -->
+                <img src="{% static 'images/new/new12.png' %}" class="img-fluid">
               </div>
             </div>
           </div>
           <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
-                <span class="flaticon-award"></span>
+              <div class="icon d-flex justify-content-center align-items-center mb-2">
+                <!-- <span class="flaticon-award"></span> -->
+                <img src="{% static 'images/new/new13.png' %}" class="img-fluid">
               </div>
             </div>
           </div>
           <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
-                <span class="flaticon-customer-service"></span>
+              <div class="icon d-flex justify-content-center align-items-center mb-2">
+                <!-- <span class="flaticon-customer-service"></span> -->
+                <img src="{% static 'images/new/new14.jpg' %}" class="img-fluid">
               </div>
             </div>
           </div>
