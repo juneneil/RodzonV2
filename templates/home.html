@@ -38,48 +38,132 @@
   </div>
 </section> -->
 
-<!--All Product / Landing page image-->
 <style>
-  #slideshow {
+  /* Slideshow container */
+  #slideshow_home_landing_page {
       overflow: hidden;
-      height: 550px;
-      /* width: 1200px; */
-      width: 80%;
-      margin: 0 auto;
+      width: 100%; /* Full width */
+      height: 600px; /* Default height for desktop */
+      position: relative;
+      background-color: transparent;
+      box-sizing: border-box;
   }
+
+  /* Individual slides */
   .slide {
-      float: left;
-      height: 550px;
-      width: 1200px;
-      /* width: 90%; */
-      background-size: cover;
-      background-position: center;
+      height: 580px; /* Full height of the container */
+      width: 100%; /* Full width of the container */
+      background-size: cover; /* Ensures the image covers the container without distortion */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Prevent repeating the image */
+      flex-shrink: 0; /* Prevent shrinking */
   }
-  .slide-wrapper {
-      width: calc(1200px * 3);
-      animation: slide 20s ease infinite;
+
+  /* Slide wrapper that holds all slides */
+  .slide-wrapper-home-landing-page {
+      display: flex;
+      transition: transform 1s ease-in-out; /* Smooth transition for sliding */
+      width: 100%; /* Make space for 3 slides */
   }
+
+  /* Keyframes for slide animation */
   @keyframes slide {
       0% {
-          margin-left: 0px;
+          transform: translateX(0);
       }
-      25% {
-          margin-left: calc(-1200px * 1);
+      33.33% {
+          transform: translateX(-100%);
       }
-      50% {
-          margin-left: calc(-1200px * 2);
+      66.66% {
+          transform: translateX(-200%);
       }
-      
-      
+      100% {
+          transform: translateX(0);
+      }
   }
+
+  /* Media Query for tablets and small screens (max-width: 768px) */
+  @media (max-width: 768px) {
+      #slideshow_home_landing_page {
+          height: 400px; /* Adjust height for smaller screens */
+      }
+
+      .slide-wrapper-home-landing-page {
+          width: 300%; /* Ensure all 3 images are still visible */
+      }
+
+      .slide {
+          height: 400px; /* Adjust height for better fitting */
+      }
+  }
+
+  /* Media Query for phones (max-width: 480px) */
+  @media (max-width: 480px) {
+      #slideshow_home_landing_page {
+          height: 250px; /* Adjust height for very small screens */
+      }
+
+      .slide-wrapper-home-landing-page {
+          width: 300%; /* Keep the 3 images visible */
+          animation: slide 10s ease-in-out infinite; /* Auto slide with infinite loop */
+      }
+
+      .slide {
+          height: 250px; /* Adjust slide height for small screens */
+      }
+  }
+
+  /* Landscape orientation for small phones (max-width: 480px) */
+  @media (max-width: 480px) and (orientation: landscape) {
+      #slideshow_home_landing_page {
+          height: 200px; /* Adjust height further in landscape orientation */
+      }
+
+      .slide {
+          height: 200px; /* Smaller height in landscape mode */
+      }
+  }
+
+
 </style>
-<div id="slideshow">
-    <div class="slide-wrapper">
-        <div class="slide" style="background-image: url({% static 'images/new/new1.jpg' %});"></div>
-        <div class="slide" style="background-image: url({% static 'images/new/new2.jpg' %});"></div>
-        <div class="slide" style="background-image: url({% static 'images/new/new3.jpg' %});"></div>
-    </div>
+
+<!-- Slideshow HTML -->
+<div id="slideshow_home_landing_page">
+  <div class="slide-wrapper-home-landing-page" style="height: 100%; width: auto;">
+      <div class="slide" style="background-image: url({% static 'images/new1.jpg' %});"></div>
+      <div class="slide" style="background-image: url({% static 'images/new2.jpg' %});"></div>
+      <div class="slide" style="background-image: url({% static 'images/new3.jpg' %});"></div>
+  </div>
 </div>
+
+<script>
+  // Get the slide wrapper element
+  const slideWrapper = document.querySelector('.slide-wrapper-home-landing-page');
+
+  // Set the initial transform position
+  let currentSlide = 0;
+
+  // Function to change slide every 3 seconds
+  function changeSlide() {
+      currentSlide++;
+      if (currentSlide > 2) { // There are 3 images (0, 1, 2)
+          currentSlide = 0; // Loop back to the first slide
+      }
+
+      // Adjust the transform property to slide the images
+      slideWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  // Set an interval to automatically change the slide every 3 seconds
+  setInterval(changeSlide, 3000);
+
+</script>
+
+
+
+
+
+
 
 
 
@@ -88,77 +172,168 @@
 
 <!--Eto yung dating Introduction-->
 
-<!-- <style>
-  .rodflex-container {
-  display: flex;
-  flex-direction: row;
-  font-size: 20px;
-  text-align: center;
-}
+<style>
+  
 
-.rodflex-item-left {
-  /* background-color: #f1f1f1; */
-  padding: 5px;
-  flex: 50%;
-}
-
-.rodflex-item-right {
-  /* background-color: dodgerblue; */
-  padding: 5px;
-  flex: 50%;
-}
-
-/* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 800px) {
-  .rodflex-container {
-    flex-direction: column;
+  /* Base styles for the image column */
+  .img-5 {
+    background-size: cover;           /* Ensure the background covers the entire div */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat;      /* Prevent the image from repeating */
+    height: 100%;                      /* Ensure the column takes the full height */
+    width: 100%;                       /* Full width of the column */
+    max-height: 500px;                 /* Max height for desktop */
+    display: flex;
+    justify-content: center;           /* Center the content horizontally */
+    align-items: center; 
+    padding: 18px;              /* Center the content vertically */
   }
-}
+
+  /* Responsiveness for tablets and small desktops */
+  @media (max-width: 1024px) {
+    .img-5 {
+      max-height: 500px;             /* Adjust height for tablets and smaller desktops */
+    }
+  }
+
+  /* For very small screens like mobile (max-width: 480px) */
+  @media (max-width: 480px) {
+    .img-5 {
+      max-height: 300px;             /* Adjust image height for mobile screens */
+    }
+  }
+  @media (max-width: 480px) {
+    .col-md-7 {
+        padding: 10px 24px;
+    }
+  }
+
+  /* Adjust the layout for smaller screens */
+  @media (max-width: 768px) {
+    .col-md-5 {
+      order: 2;  /* Moves the image to the top on tablets and smaller screens */
+      padding: 0; /* Remove padding on mobile */
+    }
+
+    .col-md-7 {
+      order: 1;  /* Moves text content on top */
+    }
+  }
+  @media (min-width: 768px) {
+    .col-md-7 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 58.33333%;
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%;
+        padding: 26px;
+    }
+  }
+  @media (min-width: 768px) {
+    .col-md-5 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.66667%;
+        flex: 0 0 41.66667%;
+        max-width: 86.66667%;
+        padding: 101px 0px;
+    }
+  }
+  /* Further adjustments for mobile screens */
+  @media (max-width: 480px) {
+    .rodflex-item-right {
+      padding: 0 15px; /* Adjust padding for better text readability on small screens */
+    }
+    .col-md-7 {
+      padding: 15px 0; /* Add some padding to the text column for better spacing */
+    }
+  }
+
+  /* Ensure better responsiveness for the text content */
+  .rodflex-item-right p {
+    font-size: 16px; /* Ensure readable text on all screen sizes */
+    padding: 7px;
+  }
+
+  /* Make sure the heading is responsive */
+  .heading-section h3 {
+    font-size: 28px; /* Smaller size for smaller devices */
+    padding: 28px;
+  }
+
+  /* Make buttons responsive and properly aligned */
+  .btn-primary {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  /* Larger view adjustments */
+  @media (min-width: 992px) {
+    .rodflex-item-right p {
+      font-size: 18px; /* Larger font size for desktop */
+      padding: 18px;
+    }
+    .heading-section h3 {
+      font-size: 34px; /* Larger heading on desktops */
+    }
+  }
+  @media (min-width: 768px) {
+    .col-md-5 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.66667%;
+        flex: 0 0 41.66667%;
+        max-width: 96.66667%;
+        padding: 106px 20px;
+        padding-left: 40px;
+    }
+  }
+
 </style>
 
 
 
-<section >
-  <div class="rodflex-container">
-    <div class="rodflex-item-left">
-      <div>
-        <div class="ftco-section img"  id="secs1" style="background-image: url({% static 'images/new/new4.jpg' %});"></div>
-      </div>
-    </div>
-    <div class="rodflex-item-right">
-      <div class="">
-        <div class="row justify-content-center pt-5 pb-4">
-          <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
-            <h3><a href="#">Who we are</a></h3>
-            <p>Rodzon Marketing Corporation (RMC) stands as a premier leader in the sales and distribution of 
-              an extensive range of products from both local and international manufacturers. As a proudly 100%
-              Filipino-owned enterprise, RMC is manage by a family with a deep-rooted legacy of business success
-              and excellence.</p>
+<section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+  <div class="container">
+    <div class="column">
+      <div class="rodflex-container">
+        <div class="row justify-content-center" >
+          <!-- Image Column (Left on desktop, Top on mobile) -->
+          <div class="img col-md-5">
+            <div class="col-md-5  p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-size: cover; background-position: center; background-repeat: no-repeat;  width: 100%; height: 550px; background-image: url({% static 'images/04_BOXES.jpg' %});">
+            </div>  
+          </div>
+          <!-- Text Content Column -->
+          <div class="col-md-7 rodflex-item-right">
+            <div class="heading-section ftco-animate">
+              <h3><a href="#"><b>Who we are</b></a></h3>
+              <p>Rodzon Marketing Corporation (RMC) stands as a premier leader in the sales and distribution of 
+                an extensive range of products from both local and international manufacturers. As a proudly 100%
+                Filipino-owned enterprise, RMC is managed by a family with a deep-rooted legacy of business success
+                and excellence.</p>
               <br>
-            <p>Our commitment to quality and customer satisfaction has established us as a trusted partner in the 
-              industry, continually striving to deliver outstanding service and innovative solutions. With a dedicated 
-              team and passion for excellence, RMC continues to set the standard in the market, ensuring the highest level 
-              of reliability and professionalism.</p>
+              <p>Our commitment to quality and customer satisfaction has established us as a trusted partner in the 
+                industry, continually striving to deliver outstanding service and innovative solutions. With a dedicated 
+                team and passion for excellence, RMC continues to set the standard in the market, ensuring the highest level 
+                of reliability and professionalism.</p>
               <br>
-            <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
+              <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section> -->
 
-<section class="ftco-section ftco-no-pb ftco-no-pt bg-white">
+  </div>
+</section>
+
+
+<!-- <section class="ftco-section ftco-no-pb ftco-no-pt bg-white">
   <div class="container">
     <div class="row pt-5 pb-5">
-      <div class="col-md-5 p-md-5 img img-5 d-flex justify-content-center align-items-center pt-4" style="background-image: url({% static 'images/new/new4.jpg' %});">
-        <!-- <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
-          <span class="icon-play"></span>
-        </a> -->
-        <!-- <a href="{% static 'images/new/video.MP4' %}" class="icon popup-vimeo d-flex justify-content-center align-items-center">
-          <span class="icon-play"></span>
-        </a> -->
+       Image Column 
+      <div class="col-md-5 p-md-5 img img-5 d-flex justify-content-center align-items-center pt-4">
+           <div class="slide" style="background-image: url({% static 'images/new3.jpg' %});"></div>
       </div>
+      
+       Text Content Column 
       <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
         <div class="heading-section-bold mb-4 mt-md-5">
           <div class="ml-md-0">
@@ -168,23 +343,27 @@
         <div class="pb-md-5">
           <p>Rodzon Marketing Corporation (RMC) stands as a premier leader in the sales and distribution of 
             an extensive range of products from both local and international manufacturers. As a proudly 100%
-            Filipino-owned enterprise, RMC is manage by a family with a deep-rooted legacy of business success
+            Filipino-owned enterprise, RMC is managed by a family with a deep-rooted legacy of business success
             and excellence.</p>
           <br>
           <p>Our commitment to quality and customer satisfaction has established us as a trusted partner in the 
             industry, continually striving to deliver outstanding service and innovative solutions. With a dedicated 
-            team and passion for excellence, RMC continues to set the standard in the market, ensuring the highest level 
+            team and passion for excellence, RMC continues to set the standard in the market, ensuring the highest level
             of reliability and professionalism.</p>
           <br>
-          <p>In more than three decades in the business, RMC has superb customer base and support, proven sales management techniques
-            and warehousing system that's definitely world-class and globally-competitive.</p>
+          <p>In more than three decades in the business, RMC has superb customer base and support, proven sales management
+            and warehousing system that's definitely world-class and globally competitive.</p>
           <br>
           <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section>-->
+
+
+
+
 
 <!--Business to Consumer-->
 <section class="ftco-section">
@@ -205,7 +384,7 @@
   <div class="container">
     <div class="column">
       <div style="display: flex; justify-content: center; align-items: center;">
-        <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-size: cover; background-position: center; background-repeat: no-repeat; width: 60%; height: 550px; background-image: url({% static 'images/LEADERS PORTRAIT.jpg' %});">
+        <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-size: cover; background-position: center; background-repeat: no-repeat; width: 90%; height: 550px; background-image: url({% static 'images/LEADERS PORTRAIT.jpg' %});">
           <!-- <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
             <span class="icon-play"></span>
           </a> -->
@@ -220,7 +399,7 @@
               <h2 class="mb-4">About Rodzon Marketing Corporation</h2>
             </div>
           </div>
-          <div class="pb-md-5">
+          <div class="text">
             <p>With its humble beginnings in 1977, Rodzon Marketing Corporation (RMC), became one of the leading companies
               in the sales and distribution of a wide range of products of both local and foreign manufacturers.</p>
             <br>
@@ -282,7 +461,7 @@
 </section>
 
 <!--Key Accounts/Partners-->
-<section class="ftco-section ftco-partner" id="secs2">
+<!-- <section class="ftco-section ftco-partner" id="secs2">
   <div class="row justify-content-center mb-5 pb-3">
     <div class="col-md-7 heading-section ftco-animate text-center">
       <span class="subheading" style="font-size: 30px; font-weight: bold;">Partners</span>
@@ -313,7 +492,7 @@
       </div>
     </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- <div class="container">
     <div class="row">
@@ -328,7 +507,65 @@
       </div>
     </div>
   </div> -->
-</section>
+<!-- </section> -->
+
+
+
+<!--Key Accounts/Partners-->
+<div class="container">
+  <div class="row">
+    <section class="ftco-section ftco-partner" id="secs2">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center">
+          <span class="subheading" style="font-size: 30px; font-weight: bold;">Partners</span>
+        </div>
+      </div>
+      <div class="container" style="padding: 33px;">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-sm ftco-animate">
+            <a href="#" class="partner"><img src="{% static 'images/pic3.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
+          </div>
+          <div class="col-sm ftco-animate">
+            <a href="#" class="partner"><img src="{% static 'images/pic4.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+          </div>
+          <div class="col-sm ftco-animate">
+            <a href="#" class="partner"><img src="{% static 'images/pic5.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+          </div>
+          <div class="col-sm ftco-animate">
+            <a href="#" class="partner"><img src="{% static 'images/pic6.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+          </div>
+          <div class="col-sm ftco-animate">
+            <a href="#" class="partner"><img src="{% static 'images/pic7.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+          </div>
+          <div class="col-sm ftco-animate">
+            <a href="#" class="partner"><img src="{% static 'images/pic8.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
+          </div>
+          <div class="col-sm ftco-animate">
+            <a href="#" class="partner"><img src="{% static 'images/pic9.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+          </div>
+        </div>
+        </div>
+      </div>
+  </div>
+
+</div>
+
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="{% static 'images/pic7.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="{% static 'images/pic8.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="{% static 'images/pic9.png' %}" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+    </div>
+  </div> -->
+
+
+
 
 <!--Our Services-->
 <style>
@@ -342,7 +579,7 @@
   <div class="container">
     <div class="row justify-content-center mb-5 pb-3">
       <div class="col-md-7 heading-section ftco-animate text-center">
-        <span class="subheading" style="font-size: 30px; font-weight: bold;">Our Services</span>
+        <span class="subheading" style="font-size: 30px; font-weight: bold; padding-left: 10px;">Our Services</span>
       </div>
     </div>
     <div class="row ftco-animate">
@@ -390,127 +627,210 @@
   </div>
 </section>
 
-<!--Our Clients-->
-<section class="ftco-section" id="secs4">
-  <div class="container">
-    <div class="row justify-content-center mb-5 pb-3">
-      <div class="col-md-7 heading-section ftco-animate text-center">
-        <span class="subheading" style="font-size: 30px; font-weight: bold;">Our Clients</span>
-      </div>
-    </div>
-    <div class="row no-gutters ftco-services">
-      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-        <div class="media block-6 services mb-md-0 mb-4">
-          <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
-            <!-- <span class="flaticon-shipped"></span> -->
-            <img src="{% static 'images/new/new5.jpg' %}" class="img-fluid">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-        <div class="media block-6 services mb-md-0 mb-4">
-          <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
-            <!-- <span class="flaticon-diet"></span> -->
-            <img src="{% static 'images/new/new6.jpg' %}" class="img-fluid">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-        <div class="media block-6 services mb-md-0 mb-4">
-          <div class="icon d-flex justify-content-center align-items-center mb-2">
-            <!-- <span class="flaticon-award"></span> -->
-            <img src="{% static 'images/new/new7.jpg' %}" class="img-fluid">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-        <div class="media block-6 services mb-md-0 mb-4">
-          <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
-            <!-- <span class="flaticon-customer-service"></span> -->
-            <img src="{% static 'images/new/new8.png' %}" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="row no-gutters ftco-services mt-3">
-      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-        <div class="media block-6 services mb-md-0 mb-4">
-          <div class="icon active d-flex justify-content-center align-items-center mb-2">
-            <!-- <span class="flaticon-shipped"></span> -->
-            <img src="{% static 'images/new/new9.png' %}" class="img-fluid">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-        <div class="media block-6 services mb-md-0 mb-4">
-          <div class="icon d-flex justify-content-center align-items-center mb-2">
-            <img src="{% static 'images/new/new12.png' %}" class="img-fluid">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-        <div class="media block-6 services mb-md-0 mb-4">
-          <div class="icon d-flex justify-content-center align-items-center mb-2">
-            <img src="{% static 'images/new/new13.png' %}" class="img-fluid">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-        <div class="media block-6 services mb-md-0 mb-4">
-          <div class="icon d-flex justify-content-center align-items-center mb-2">
-            <img src="{% static 'images/new/new14.jpg' %}" class="img-fluid">
-          </div>
-        </div>
+<!--Our Clients-->
+<section class="ftco-section ftco-partner" id="secs2">
+  <div class="row justify-content-center mb-5 pb-3">
+    <div class="col-md-7 heading-section ftco-animate text-center">
+      <span class="subheading" style="font-size: 30px; font-weight: bold;">Our Clients</span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="client-logos">
+        <a href="#" class="partner"><img src="{% static 'images/new/new12.png' %}" alt="Client Logo"></a>
+        <a href="#" class="partner"><img src="{% static 'images/new/new13.png' %}" alt="Client Logo"></a>
+        <a href="#" class="partner"><img src="{% static 'images/new/new14.jpg' %}" alt="Client Logo"></a>
+        <a href="#" class="partner"><img src="{% static 'images/new/new8.png' %}" alt="Client Logo"></a>
+        <a href="#" class="partner"><img src="{% static 'images/new/new5.jpg' %}" alt="Client Logo"></a>
+        <a href="#" class="partner"><img src="{% static 'images/new/new6.jpg' %}" alt="Client Logo"></a>
+        <a href="#" class="partner"><img src="{% static 'images/new/new7.jpg' %}" alt="Client Logo"></a>
+        <a href="#" class="partner"><img src="{% static 'images/new/new9.png' %}" alt="Client Logo"></a>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .client-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Adjust gap between logos */
+    justify-content: center; /* Center logos horizontally */
+    align-items: center; /* Align logos vertically */
+    padding: 20px 0; /* Add padding for spacing */
+  }
+
+  .client-logos a {
+    display: block;
+    width: 100%;  /* Ensures logos are responsive */
+    max-width: 150px; /* Adjust the size of the logos */
+    transition: transform 0.3s ease;
+    text-align: center; /* Center images inside anchor */
+  }
+
+  .client-logos img {
+    width: 100%; /* Make sure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    max-width: 100%; /* Ensure images stay within their container */
+  }
+
+  .client-logos a:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .client-logos {
+      gap: 10px; /* Reduce gap on medium screens */
+    }
+
+    .client-logos a {
+      max-width: 120px; /* Adjust logo size on medium screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .client-logos {
+      gap: 5px; /* Reduce gap on small screens */
+    }
+
+    .client-logos a {
+      max-width: 100px; /* Adjust logo size for very small screens */
+    }
+  }
+</style>
+
 
 <!--3 Flagships-->
 <section class="ftco-section ftco-category ftco-no-pt" id="secs3">
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
-        <div class="row">
-          <div class="col-md-6 order-md-last align-items-stretch d-flex">
-            <div class="category-wrap-2 ftco-animate img align-self-stretch d-flex">
-              <div class="text text-center">
-                <h2>Flag Ships</h2>
-                <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
-              </div>
+      <!-- Left Column: Flagships Title and First Two Categories -->
+      <div class="col-md-12 d-flex justify-content-center align-items-center mb-4">
+        <div class="category-wrap-2 ftco-animate img align-self-stretch d-flex">
+          <div class="text text-center w-100">
+            <div class="heading-section ftco-animate text-center">
+              <span class="subheading">Flagships</span>
             </div>
+            <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
           </div>
-          <div class="col-md-6">
+        </div>
+      </div>
+
+      <!-- Product Categories Section -->
+      <div class="col-12">
+        <div class="row">
+          <!-- Product Category 1 -->
+          <div class="col-md-4 col-12">
             <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({% static 'images/06 COCO JAM.jpg' %});">
               <div class="text px-3 py-1">
                 <h2 class="mb-0"><a href="#">CocoJam</a></h2>
               </div>
             </div>
-            <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url({% static 'images/06 PB.jpg' %});">
+          </div>
+
+          <!-- Product Category 2 -->
+          <div class="col-md-4 col-12">
+            <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({% static 'images/06 PB.jpg' %});">
               <div class="text px-3 py-1">
                 <h2 class="mb-0"><a href="#">Peanut Butter</a></h2>
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({% static 'images/06 COCO JAM.jpg' %});">
-          <div class="text px-3 py-1">
-            <h2 class="mb-0"><a href="#">Coco Jam</a></h2>
-          </div>
-        </div>
-        <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url({% static 'images/06 SALABAT.jpg' %});">
-          <div class="text px-3 py-1">
-            <h2 class="mb-0"><a href="#">Salabat</a></h2>
+          <!-- Product Category 3 -->
+          <div class="col-md-4 col-12">
+            <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({% static 'images/06 SALABAT.jpg' %});">
+              <div class="text px-3 py-1">
+                <h2 class="mb-0"><a href="#">Salabat</a></h2>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  /* Ensure the heading is centered */
+  .heading-section {
+    text-align: center; /* Center text on all devices */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+
+  .subheading {
+    font-size: 30px; /* Default font size */
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  /* Adjust the product categories layout */
+  .category-wrap {
+    background-size: cover;
+    background-position: center;
+    height: 250px; /* Default height */
+    border-radius: 5px;
+    position: relative;
+    width: 100%; /* Ensure the image fills the container */
+  }
+
+  .category-wrap .text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  /* Responsive font size adjustments */
+  @media (max-width: 768px) {
+    .subheading {
+      font-size: 26px; /* Slightly smaller font size for medium screens */
+    }
+
+    .category-wrap {
+      height: 200px; /* Smaller height for medium screens */
+    }
+
+    .col-md-4 {
+      flex: 0 0 100%; /* Stack categories vertically for medium screens */
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .subheading {
+      font-size: 22px; /* Smaller font size for mobile screens */
+    }
+
+    .category-wrap {
+      height: 180px; /* Even smaller height for smaller screens */
+    }
+
+    .col-md-4 {
+      flex: 0 0 100%; /* Stack categories vertically for small screens */
+      max-width: 100%;
+    }
+  }
+
+  /* Ensuring horizontal alignment for larger screens */
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .col-md-4 {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+
 
 <!--Contact us-->
 
@@ -560,7 +880,7 @@
       </div>
       {% endfor %}
       {% else %}
-      <h2 style="margin: auto">Sorry! There is no Products Available!</h2>
+      <!-- <h2 style="margin: auto">Sorry! There is no Products Available!</h2> -->
       {% endif %}
     </div>
   </div>
@@ -571,7 +891,7 @@
 <!--Footer-->
 
 <!-- <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light"> -->
-<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/new/new10.png' %});">
+<!-- <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/new/new10.png' %});">
   <div class="container py-4">
     <div class="row d-flex justify-content-center py-5">
       <div class="col-md-6">
@@ -589,5 +909,94 @@
       </div>
     </div>
   </div>
+</section> -->
+
+<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/new/new10.png' %});">
+  <div class="container py-4">
+    <div class="row d-flex justify-content-center py-5">
+      <div class="col-md-6 text-center text-md-left">
+        <h2 style="font-size: 22px;" class="mb-0">Subscribe to our Newsletter</h2>
+        <span>Get e-mail updates about our latest Products and special offers</span>
+      </div>
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <form class="subscribe-form" method="POST" style="width: 100%;">
+          <div class="form-group d-flex">
+            {% csrf_token %}
+            {{ forms.email }}
+            <input type="submit" value="Subscribe" class="submit px-3">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
+
+<style>
+  /* Overall container adjustments */
+  .ftco-section {
+    padding: 60px 0; /* Add padding to the section */
+  }
+
+  .subscribe-form {
+    width: 100%;
+  }
+
+  /* Input field and button styling */
+  .subscribe-form .form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .subscribe-form input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  .subscribe-form .submit {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .subscribe-form .submit:hover {
+    background-color: #0056b3;
+  }
+
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .ftco-section {
+      padding: 40px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .subscribe-form .form-group {
+      flex-direction: column; /* Stack form elements on smaller screens */
+      align-items: stretch; /* Stretch input and button */
+    }
+
+    .subscribe-form input[type="email"] {
+      width: 100%; /* Make input take full width on small screens */
+      margin-bottom: 10px; /* Space between input and button */
+    }
+
+    .subscribe-form .submit {
+      width: 100%; /* Make the button take full width on small screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .ftco-section {
+      padding: 30px 15px; /* Adjust padding for extra small screens */
+    }
+  }
+</style>
+
 {% endblock %}
