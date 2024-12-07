@@ -2,71 +2,67 @@
 {% load static %}
 
 {% block content %}
-    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/new/new19.jpg' %});">
+    <style>
+      @media (min-width: 500px) {
+        .hero-wrap.hero-bread {
+          background-image: url({% static 'images/new/new18.jpg' %});
+          width: 100%; height: 555px;
+        }
+      }
+
+      
+        
+
+     
+    </style>
+    <div class="hero-wrap hero-bread" style="background-image: url({% static 'images/new/new18.jpg' %}); padding: 106px 0px;">
       <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center">
-          <div class="col-md-9 ftco-animate text-center">
-          	<!-- <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Home</a></span> <span>About us</span></p>
-            <h1 class="mb-0 bread">About us</h1> -->
-          </div>
+        <div class="no-gutters slider-text align-items-center justify-content-center">
+          
         </div>
       </div>
     </div>
 
     <!--About-->
-    <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+    <section class="ftco-section ftco-no-pb ftco-no-pt bg-light" style="margin-top: 98px;">
       <div class="container">
-        <div class="row">
-          <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/LEADERS PORTRAIT.jpg' %});">
-            <a href="{% static 'images/new/video.MP4' %}" class="icon popup-vimeo d-flex justify-content-center align-items-center">
-              <span class="icon-play"></span>
-            </a>
-          </div>
-          <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
-            <div class="heading-section-bold mb-4 mt-md-5">
-              <div class="ml-md-0">
-                <h2 class="mb-4">About Rodzon Marketing Corporation</h2>
+        <div class="column">
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-size: cover; background-position: center; background-repeat: no-repeat; width: 90%; height: 550px; background-image: url({% static 'images/LEADERS PORTRAIT.jpg' %});">
+              <!-- <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+                <span class="icon-play"></span>
+              </a> -->
+              <a href="{% static 'images/new/video.MP4' %}" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+                <span class="icon-play"></span>
+              </a>
+            </div>
+          </div>  
+            <div class="col-md-12 py-5 wrap-about pb-md-5 ftco-animate">
+              <div class="heading-section-bold mb-4 mt-md-5">
+                <div class="ml-md-0">
+                  <h2 class="mb-4">About Rodzon Marketing Corporation</h2>
+                </div>
+              </div>
+              <div class="text">
+                <p>With its humble beginnings in 1977, Rodzon Marketing Corporation (RMC), became one of the leading companies
+                  in the sales and distribution of a wide range of products of both local and foreign manufacturers.</p>
+                <br>
+                <p>RMC is a 100% Filipino-owned enterprise, managed by a family which carries the legacy of success and excellence
+                  in business.</p>
+                <br>
+                <p>In more than three decades in the business, RMC has superb customer base and support, proven sales management techniques
+                  and warehousing system that's definitely world-class and globally-competitive.</p>
+                <br>
+                <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
               </div>
             </div>
-            <div class="pb-md-5">
-              <p>With its humble beginnings in 1977, Rodzon Marketing Corporation (RMC), became one of the leading companies
-                in the sales and distribution of a wide range of products of both local and foreign manufacturers.</p>
-              <br>
-              <p>RMC is a 100% Filipino-owned enterprise, managed by a family which carries the legacy of success and excellence
-                in business.</p>
-              <br>
-              <p>In more than three decades in the business, RMC has superb customer base and support, proven sales management techniques
-                and warehousing system that's definitely world-class and globally-competitive.</p>
-              <br>
-              <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
-
-		<!-- <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light"> -->
-    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/new/new10.png' %});">
-      <div class="container py-4">
-        <div class="row d-flex justify-content-center py-5">
-          <div class="col-md-6">
-          	<h2 style="font-size: 22px;" class="mb-0">Subcribe to our Newsletter</h2>
-          	<span>Get e-mail updates about our latest Products and special offers</span>
-          </div>
-          <div class="col-md-6 d-flex align-items-center">
-            <form action="#" class="subscribe-form">
-              <div class="form-group d-flex">
-                <input type="text" class="form-control" placeholder="Enter email address">
-                <input type="submit" value="Subscribe" class="submit px-3">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!--Actual Data-->
-		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/new/new10.png' %});">
+		<!-- <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/new/new10.png' %});">
       <div class="container">
         <div class="row justify-content-center py-5">
           <div class="col-md-10">
@@ -107,84 +103,138 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="ftco-section">
+    <!--Actual Data-->
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/new/new10.png' %});">
       <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-            <span class="subheading" style="font-size: 30px; font-weight: bold;">Our Clients</span>
-          </div>
-        </div>
-        <div class="row no-gutters ftco-services">
-          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
-                <!-- <span class="flaticon-shipped"></span> -->
-                <img src="{% static 'images/new/new5.jpg' %}" class="img-fluid">
+        <div class="row justify-content-center py-5">
+          <div class="col-md-10">
+            <div class="row">
+              <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 text-center">
+                  <div class="text">
+                    <strong class="number" data-number="40" style="font-weight: 700; font-size: 50px; color: #000000;">0</strong><strong style="font-weight: 700; font-size: 50px; color: #000000;">+</strong>
+                    <span style="font-weight: 400; font-size: 15px; color: #000000;">Years of Experience</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
-                <!-- <span class="flaticon-diet"></span> -->
-                <img src="{% static 'images/new/new6.jpg' %}" class="img-fluid">
+              <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 text-center">
+                  <div class="text">
+                    <strong class="number" data-number="100" style="font-weight: 700; font-size: 50px; color: #000000;">0</strong><strong style="font-weight: 700; font-size: 50px; color: #000000;">+</strong>
+                    <span style="font-weight: 400; font-size: 15px; color: #000000;">Product Lines</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon d-flex justify-content-center align-items-center mb-2">
-                <!-- <span class="flaticon-award"></span> -->
-                <img src="{% static 'images/new/new7.jpg' %}" class="img-fluid">
+              <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 text-center">
+                  <div class="text">
+                    <strong class="number" data-number="8" style="font-weight: 700; font-size: 50px; color: #000000;">0</strong>
+                    <span style="font-weight: 400; font-size: 15px; color: #000000;">Partners</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
-                <!-- <span class="flaticon-customer-service"></span> -->
-                <img src="{% static 'images/new/new8.png' %}" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <div class="row no-gutters ftco-services mt-3">
-          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon active d-flex justify-content-center align-items-center mb-2">
-                <!-- <span class="flaticon-shipped"></span> -->
-                <img src="{% static 'images/new/new9.png' %}" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon d-flex justify-content-center align-items-center mb-2">
-                <!-- <span class="flaticon-diet"></span> -->
-                <img src="{% static 'images/new/new12.png' %}" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon d-flex justify-content-center align-items-center mb-2">
-                <!-- <span class="flaticon-award"></span> -->
-                <img src="{% static 'images/new/new13.png' %}" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services mb-md-0 mb-4">
-              <div class="icon d-flex justify-content-center align-items-center mb-2">
-                <!-- <span class="flaticon-customer-service"></span> -->
-                <img src="{% static 'images/new/new14.jpg' %}" class="img-fluid">
+              <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 text-center">
+                  <div class="text">
+                    <strong class="number" data-number="10000" style="font-weight: 700; font-size: 50px; color: #000000;">0</strong><strong style="font-weight: 700; font-size: 50px; color: #000000;">+</strong>
+                    <span style="font-weight: 400; font-size: 15px; color: #000000;">Stores Nationwide</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!--Our Clients-->
+    <style>
+      .client-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px; /* Adjust gap between logos */
+      justify-content: center; /* Center logos horizontally */
+      align-items: center; /* Align logos vertically */
+    }
+    
+    .client-logos a {
+      display: block;
+      max-width: 150px; /* Adjust size of the logos */
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+    
+    .client-logos img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .client-logos a:hover {
+      transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+    
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      .client-logos {
+        gap: 10px;
+      }
+    
+      .client-logos a {
+        max-width: 120px; /* Adjust size for smaller screens */
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .client-logos a {
+        max-width: 100px; /* Adjust size for very small screens */
+      }
+    }
+    </style>
+    
+    
+    <section class="ftco-section ftco-partner" id="secs2">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center">
+          <span class="subheading" style="font-size: 30px; font-weight: bold;">Our Clients</span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="client-logos">
+            <a href="#" class="partner"><img src="{% static 'images/new/new12.png' %}" alt="Client Logo"></a>
+            <a href="#" class="partner"><img src="{% static 'images/new/new13.png' %}" alt="Client Logo"></a>
+            <a href="#" class="partner"><img src="{% static 'images/new/new14.jpg' %}" alt="Client Logo"></a>
+            <a href="#" class="partner"><img src="{% static 'images/new/new8.png' %}" alt="Client Logo"></a>
+            <a href="#" class="partner"><img src="{% static 'images/new/new5.jpg' %}" alt="Client Logo"></a>
+            <a href="#" class="partner"><img src="{% static 'images/new/new6.jpg' %}" alt="Client Logo"></a>
+            <a href="#" class="partner"><img src="{% static 'images/new/new7.jpg' %}" alt="Client Logo"></a>
+            <a href="#" class="partner"><img src="{% static 'images/new/new9.png' %}" alt="Client Logo"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light"> -->
+      <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/new/new10.png' %});">
+        <div class="container py-4">
+          <div class="row d-flex justify-content-center py-5">
+            <div class="col-md-6">
+              <h2 style="font-size: 22px;" class="mb-0">Subcribe to our Newsletter</h2>
+              <span>Get e-mail updates about our latest Products and special offers</span>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+              <form action="#" class="subscribe-form">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control" placeholder="Enter email address">
+                  <input type="submit" value="Subscribe" class="submit px-3">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 {% endblock %}

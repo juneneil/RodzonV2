@@ -1,58 +1,53 @@
 <footer class="ftco-footer ftco-section">
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="mouse">
         <a href="#" class="mouse-icon">
           <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
         </a>
       </div>
     </div>
-    <div class="row mb-5">
-      <div class="col-md">
-        <div class="ftco-footer-widget mb-4">
+    <div class="row mb-4"> <!-- Reduced bottom margin -->
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-3"> <!-- Reduced margin bottom -->
           <h2 class="ftco-heading-2">Operating Schedule</h2>
           <p>Monday - Saturday, 8am - 6pm</p>
           <p><a href="{% url 'contact' %}#secs6" class="btn btn-primary">Know more</a></p>
-          <!-- <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-            <li class="ftco-animate"><a href="#" target="_blank"><span class="icon-twitter"></span></a></li>
-            <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61563801036627&sk=reels_tab" target="_blank"><span class="icon-facebook"></span></a></li>
-            <li class="ftco-animate"><a href="#" target="_blank"><span class="icon-instagram"></span></a></li>
-          </ul> -->
+          <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-4"> <!-- Reduced top margin -->
+            <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61563801036627" target="_blank"><span class="icon-facebook"></span></a></li>
+          </ul>
         </div>
       </div>
-      <div class="col-md">
-        <div class="ftco-footer-widget mb-4 ml-md-5">
+
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-3 ml-md-4"> <!-- Reduced margin bottom -->
           <h2 class="ftco-heading-2">Menu</h2>
           <ul class="list-unstyled">
             <li><a href="{% url 'home' %}" class="py-2 d-block">Home</a></li>
             <li><a href="{% url 'shop' %}" class="py-2 d-block">Products</a></li>
-            <li><a href="{% url 'about' %}"  class="py-2 d-block">About</a></li>
+            <li><a href="{% url 'about' %}" class="py-2 d-block">About</a></li>
             <li><a href="{% url 'blog' %}" class="py-2 d-block">Blog</a></li>
             <li><a href="{% url 'contact' %}" class="py-2 d-block">Contact us</a></li>
           </ul>
         </div>
       </div>
-      <div class="col-md-4">
-         <div class="ftco-footer-widget mb-4">
+
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-3">
           <h2 class="ftco-heading-2">Help</h2>
-          <div class="d-flex">
-            <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-              <li><a href="{% url 'home' %}#secs1" class="py-2 d-block">Introductions</a></li>
-              <li><a href="{% url 'home' %}#secs2" class="py-2 d-block">Partner Stores</a></li>
-              <li><a href="{% url 'home' %}#secs3" class="py-2 d-block">Flagships</a></li>
-              <li><a href="{% url 'home' %}#secs4" class="py-2 d-block">Clients</a></li>
-              <li><a href="{% url 'home' %}#secs5" class="py-2 d-block">Services</a></li>
-            </ul>
-            <!-- <ul class="list-unstyled">
-              <li><a href="#" class="py-2 d-block">FAQs</a></li>
-              <li><a href="{% url 'contact' %}" class="py-2 d-block">Contact</a></li>
-            </ul> -->
-          </div>
+          <ul class="list-unstyled">
+            <li><a href="{% url 'home' %}#secs1" class="py-2 d-block">Introductions</a></li>
+            <li><a href="{% url 'home' %}#secs2" class="py-2 d-block">Partner Stores</a></li>
+            <li><a href="{% url 'home' %}#secs3" class="py-2 d-block">Flagships</a></li>
+            <li><a href="{% url 'home' %}#secs4" class="py-2 d-block">Clients</a></li>
+            <li><a href="{% url 'home' %}#secs5" class="py-2 d-block">Services</a></li>
+          </ul>
         </div>
       </div>
-      <div class="col-md">
-        <div class="ftco-footer-widget mb-4">
-          <h2 class="ftco-heading-2">Have a Questions?</h2>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="ftco-footer-widget mb-3">
+          <h2 class="ftco-heading-2">Have a Question?</h2>
           <div class="block-23 mb-3">
             <ul>
               <li><span class="icon icon-map-marker"></span><span class="text"> 2451 Lakandula St, Pasay City.</span></li>
@@ -63,14 +58,243 @@
         </div>
       </div>
     </div>
+
     <div class="row">
       <div class="col-md-12 text-center">
-
-        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Rodzon</a>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        </p>
+        <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Rodzon</a></p>
       </div>
     </div>
   </div>
+
+  <style>
+   /* Footer Styles */
+    .ftco-footer {
+      background-color: #f8f9fa;
+      color: #333;
+      padding: 10px 0;  /* Reduced padding to decrease height */
+      height: 50%;  /* Set footer height to 50% */
+      display: flex;
+      flex-direction: column; /* Stacks the footer content vertically */
+      justify-content: space-between; /* Distributes space between sections */
+      box-sizing: border-box;  /* Ensure the height takes padding into account */
+    }
+
+    .ftco-footer-widget {
+      flex: 1;  /* Ensures the widgets take equal space */
+      margin-bottom: 8px;  /* Reduced bottom margin to make content more compact */
+    }
+
+    .ftco-footer-widget h2 {
+      font-size: 14px;  /* Reduced font size */
+      font-weight: bold;
+      margin-bottom: 6px;  /* Reduced margin */
+      text-transform: uppercase;
+    }
+
+    .ftco-footer-widget p {
+      margin-bottom: 4px;  /* Reduced margin */
+      font-size: 12px;  /* Smaller font size */
+    }
+
+    .ftco-footer-widget .btn {
+      font-size: 10px;  /* Smaller button font size */
+      padding: 4px 8px;  /* Smaller padding */
+      text-transform: uppercase;
+      background-color: #007bff;
+      color: white;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .ftco-footer-widget .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .ftco-footer-widget ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .ftco-footer-widget ul li {
+      margin-bottom: 4px;  /* Reduced spacing between links */
+    }
+
+    .ftco-footer-widget ul li a {
+      color: #333;
+      text-decoration: none;
+      font-size: 12px;  /* Smaller font size for links */
+    }
+
+    .ftco-footer-widget ul li a:hover {
+      color: #007bff;
+    }
+
+    .ftco-footer-social {
+      margin-top: 8px;  /* Reduced top margin */
+    }
+
+    .ftco-footer-social li {
+      display: inline-block;
+      margin-right: 6px;  /* Reduced spacing */
+    }
+
+    .ftco-footer-social li a {
+      color: #333;
+      font-size: 14px;  /* Smaller icons */
+      transition: color 0.3s;
+    }
+
+    .ftco-footer-social li a:hover {
+      color: #007bff;
+    }
+
+    /* Mouse Icon */
+    .mouse {
+      position: relative;
+      text-align: center;
+    }
+
+    .mouse-icon {
+      font-size: 22px;  /* Reduced icon size */
+      color: #333;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .mouse-wheel {
+      display: inline-block;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-6px);  /* Smaller bounce */
+      }
+    }
+
+    /* Mobile view (Width ≤ 480px) */
+    @media (max-width: 480px) {
+      .ftco-footer {
+        padding: 8px 0;  /* Further reduced padding for mobile */
+        height: auto;  /* Allowing content to adjust dynamically on small screens */
+      }
+
+      .ftco-footer-widget h2 {
+        font-size: 12px;  /* Reduced font size */
+      }
+
+      .ftco-footer-widget p {
+        font-size: 10px;  /* Smaller font size */
+      }
+
+      .ftco-footer-widget ul li a {
+        font-size: 10px;  /* Smaller font for links */
+      }
+
+      .ftco-footer-social li a {
+        font-size: 12px;  /* Smaller icons */
+      }
+
+      .ftco-footer-widget .btn {
+        font-size: 10px;
+        padding: 4px 8px;  /* Smaller buttons */
+      }
+
+      .col-md-6 {
+        margin-bottom: 12px;  /* Adjusted margin */
+      }
+
+      .col-lg-3 {
+        flex: 0 0 100%;  /* Full width for mobile screens */
+        max-width: 100%;
+      }
+    }
+
+    /* Tablet and larger screens (Width ≥ 500px) */
+    @media (min-width: 500px) {
+      .ftco-footer {
+        padding: 10px 0;  /* Slightly adjusted padding */
+        flex-direction: row;  /* Layout columns side by side */
+        justify-content: space-between;  /* Space out the columns */
+        height: auto;  /* Allow footer height to grow based on content */
+      }
+
+      .ftco-footer-widget {
+        flex: 1;  /* Widgets will share equal space */
+        margin-bottom: 10px;  /* Slight margin bottom */
+      }
+
+      .ftco-footer-widget h2 {
+        font-size: 13px;  /* Smaller font for tablet */
+      }
+
+      .ftco-footer-widget p {
+        font-size: 11px;  /* Slightly smaller font */
+      }
+
+      .ftco-footer-widget ul li a {
+        font-size: 11px;  /* Smaller link font */
+      }
+
+      .ftco-footer-widget .btn {
+        font-size: 10px;
+        padding: 4px 8px;
+      }
+
+      .col-md-6 {
+        margin-bottom: 12px;  /* Adjusted margin */
+      }
+
+      .col-lg-3 {
+        flex: 0 0 33.3333%;  /* Three columns for medium and larger screens */
+        max-width: 33.3333%;
+      }
+    }
+
+    /* Desktop view (Width ≥ 992px) */
+    @media (min-width: 992px) {
+      .ftco-footer {
+        padding: 20px 0;  /* Default padding for desktop */
+        height: auto;  /* Allow footer height to grow based on content */
+        flex-direction: row;  /* Horizontal layout */
+        justify-content: space-between;
+      }
+
+      .ftco-footer-widget {
+        flex: 1;  /* Widgets will share equal space */
+        margin-bottom: 12px;  /* Spacing between widgets */
+      }
+
+      .ftco-footer-widget h2 {
+        font-size: 16px;
+      }
+
+      .ftco-footer-widget p {
+        font-size: 13px;
+      }
+
+      .ftco-footer-widget ul li a {
+        font-size: 13px;
+      }
+
+      .ftco-footer-social li a {
+        font-size: 16px;
+      }
+
+      .ftco-footer-widget .btn {
+        font-size: 11px;
+        padding: 5px 10px;
+      }
+
+      .col-lg-3 {
+        flex: 0 0 33.3333%;  /* Three columns for large screens */
+        max-width: 33.3333%;
+      }
+    }
+
+
+  </style>
 </footer>
